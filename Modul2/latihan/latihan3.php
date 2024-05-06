@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Latihan 3</title>
-    <link rel="stylesheet" href="css/output.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="m-5">
     <?php
     /*Modul 2 Latihan 2*/
     $siswa = array(
