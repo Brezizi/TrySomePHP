@@ -2,31 +2,31 @@
 <html>
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <title></title>
+    <title>Add Student</title>
 </head>
 <body class="m-5">
-    <h3 class="font-bold">Tambah Siswa</h3>
-    <form action="add_siswa_proccess.php" method="post">
-        nama siswa :
+    <h3 class="font-bold">Add Student</h3>
+    <form action="how_add_student.php" method="post">
+        Student Name :
         <input type="text" name="nama_siswa" value="" class="form-control">
-        Tanggal Lahir : 
+        Born Date : 
         <input type="date" name="tanggal_lahir" value="" class="form-control">
         Gender : 
         <select name="gender" class="form-control">
             <option></option>
-            <option value="L">Laki-laki</option>
-            <option value="P">Perempuan</option>
+            <option value="L">Boy</option>
+            <option value="P">Girl</option>
         </select>
-        Alamat : 
+        Address : 
         <textarea name="alamat" class="form-control" rows="4"></textarea>
-        Kelas :
+        Class :
         <select name="id_kelas" class="form-control">
             <option></option>
             <?php 
             include "connect.php";
             $qry_kelas=mysqli_query($conn,"select * from kelas");
             while($data_kelas=mysqli_fetch_array($qry_kelas)){
-                echo '<option value="'.$data_kelas['id'].'">'.$data_kelas['nama_kelas'].'</option>';    
+                echo '<option value="'.$data_kelas['id_kelas'].'">'.$data_kelas['nama_kelas'].'</option>';    
             }
             ?>
         </select>
@@ -34,9 +34,7 @@
         <input type="text" name="username" value="" class="form-control">
         Password : 
         <input type="password" name="password" value="" class="form-control">
-        <input type="submit" name="simpan" value="Tambah Kelas" class="btn btn-primary">
+        <input type="submit" name="simpan" value="Submit" class="btn btn-primary">
     </form>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
 </html>
