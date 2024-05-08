@@ -28,7 +28,7 @@ session_start();
               <a class="nav-link" aria-current="page" href="cart.php">Cart</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="transaction.php">Transaction</a>
+              <a class="nav-link" aria-current="page" href="history.php">History</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" aria-current="page" href="logout.php">Logout</a>

@@ -11,9 +11,10 @@
     </thead>
     <tbody>
         <?php
-        foreach (@$_SESSION['cart'] as $key_produk => $val_produk): ?>
+        foreach (@$_SESSION['cart'] as $key_produk => $val_produk):
+        ?>
             <tr>
-                <td><?=($key_produk+1)?></td><td><?=$val_produk['nama_buku']?></td><td><?=$val_produk['qty']?></td><td><a href="delete_cart.php?id=<?=$key_produk?>" class="btn btn-danger"><strong>X</strong></a></td>
+                <td><?=($key_produk+1)?></td><td><?=$val_produk['nama_buku']?></td><td><?=$val_produk['qty']?></td><td><a href="how_delete_cart.php?id=<?=$key_produk?>" class="btn btn-danger"><strong>X</strong></a></td>
             </tr>
         <?php endforeach ?>
     </tbody>
